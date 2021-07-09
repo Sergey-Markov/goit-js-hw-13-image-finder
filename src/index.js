@@ -109,5 +109,6 @@ function openModal(e) {
         
         
 };
-
+ const cox = 1;
+ console.log(cox);
     
