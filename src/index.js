@@ -22,7 +22,7 @@ const refs = {
     listGallery: document.querySelector('.gallery'),
 };
 
-refs.formBtn.addEventListener('click', newSearcing);
+// refs.formBtn.addEventListener('click', newSearcing);
 refs.moreLoadBtn.addEventListener('click', loadMore);
 
 
