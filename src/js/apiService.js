@@ -10,13 +10,17 @@ export default class ApiService {
         this.numberOfPage = 1;
 
     }
+    
+    async fetchCountries(){
+        try {
+            const result = await fetch(`${BASE_URL}?image_type=photo&orientation=horizontal&q=${this.imageSearch}&page=${this.numberOfPage}&per_page=12&key=${API_KEY}`);
+            return result.json();
+        } catch (error) {
+            console.log(error);
+        }
+        
 
-    fetchCountries(){
-        return fetch(`${BASE_URL}?image_type=photo&orientation=horizontal&q=${this.imageSearch}&page=${this.numberOfPage}&per_page=12&key=${API_KEY}`)
-            .then(response => {
-                return response.json();
-            })
-     };
+    };
 
      nextPage(){
          this.numberOfPage +=1;
